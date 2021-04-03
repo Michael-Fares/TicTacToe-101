@@ -1,16 +1,49 @@
+body {
+  margin: 0 0 2% 0;
+  padding: 0;
+  background-color: #bbf1fa;
+}
 .jumbotron {
-  margin: 5% auto;
-  margin-left: 43%;
+  margin: 2% auto;
+  text-align: center;
+  background-color: #51c2d5;
+  padding-bottom: 2%;
 }
 
 td {
   height:150px;
   width:150px;
   text-align: center;
-  border: 5px solid black;
+  border: 5px solid #663f3f;
   font-size: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: aqua;
+  color: #ec4646;
 }
-
+td:hover {
+  background-color: #bbf1fa;
+}
 table {
   margin: auto auto;
+}
+h1 {
+  font-family: 'Monoton', cursive;
+  font-size: 50px;
+  margin: 0;
+  color: #ec4646;
+  letter-spacing: 5px;
+}
+button {
+ border: none;
+ padding: 10px;
+ background-color: #bbf1fa;
+ text-transform: uppercase;
+ color: #663f3f;
+}
+button:hover {
+  color:#bbf1fa;
+  background-color:#663f3f;
+}
+button:focus {
+  outline: none;
 }

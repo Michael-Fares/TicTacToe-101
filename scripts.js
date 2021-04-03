@@ -7,15 +7,31 @@
     // next to each @TODO you will find tasks that need to be finished
 
 // The variable will change from X to O based on what player turn it is. We need to hold this so we can place an X or O on the board when they're clicked.
+
+
+  
+
+
 let currentMarker = 'X'
 
 
-
+// const fade = (element) => {
+  
+//   }
 
 // this "handleClick" function is called when a box is clicked. Here, "element" will hold the same value as "this" does in the HTML. 
 // "this" is a special word in JS but "element" could have been "thing" or "el" or whatever we wanted it to be as long as we use it again in the "console.log" statement
 const handleClick = (element) => {
-
+  if(!element.classList.contains('animate__animated','animate__fadeIn')) {
+    element.classList.add('animate__animated','animate__fadeIn')
+    element.style.animationDuration = "1s"
+    } else {
+    element.classList.remove('animate__animated','animate__fadeIn')
+    }
+    // Add animation classes back to our element after 1 milisecond;
+    setTimeout(function(){
+      element.classList.add('animate__animated','animate__fadeIn');
+    }, 100);
   // this uses the "log" method on the "console" to log out the element's id so we can see it with our human eyes
   console.log(`The element you clicked on has an id:  ${element.id}`)
 
@@ -24,6 +40,7 @@ const handleClick = (element) => {
   if(!document.getElementById(element.id).innerHTML){
     addMarker(element.id)
   }
+  // add animation fade in with timeout function
 }
 
 
@@ -83,7 +100,6 @@ const changeMarker = () => {
 
 // This "resetBoard" function is called when the user clicks on the "Restart" button.
 const resetBoard = () => {
-  
   // @TODO-3: To make your "Restart" button work you'll need to build a line of code here that:
       // collects all of the "td" elements into an HTML Collection: https://www.w3schools.com/jsref/dom_obj_htmlcollection.asp  
 const squares = document.getElementsByTagName("TD")
@@ -94,14 +110,27 @@ const squares = document.getElementsByTagName("TD")
   // =
   // document
   // const
-  
   // loops over the HTML Collection of TDs and clears out the Xs and Os
   for (i=0; i < squares.length; i++) {
-
+    
     // will log out the id of each square as it loops over them.
     console.log(squares[i].id)
 
     // sets the innerHTML to null to replace the "X" or "O"
     squares[i].innerHTML = null
+    
+    const element = document.querySelector('table')
+    
+    if(!element.classList.contains('animate__animated','animate__fadeIn')) {
+      element.classList.add('animate__animated','animate__fadeIn')
+      element.style.animationDuration = "2s"
+      } else {
+      element.classList.remove('animate__animated','animate__fadeIn')
+      }
+      // Add animation classes back to our element after 1 milisecond;
+      setTimeout(function(){
+        element.classList.add('animate__animated','animate__fadeIn');
+      }, 100);
   }  
 }
+
