@@ -137,18 +137,24 @@ const squares = document.getElementsByTagName("TD")
 
     // sets the innerHTML to null to replace the "X" or "O"
     squares[i].innerHTML = null
-    
-    const element = document.querySelector('table')
-    
-    if(!element.classList.contains('animate__animated','animate__fadeIn')) {
-      element.classList.add('animate__animated','animate__fadeIn')
-      element.style.animationDuration = "2s"
-      } else {
-      element.classList.remove('animate__animated','animate__fadeIn')
-      }
-      // Add animation classes back to our element after 1 milisecond;
-      setTimeout(function(){
-        element.classList.add('animate__animated','animate__fadeIn');
-      }, 100);
   }  
+  // reset the board array to empty
+  board = [
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", ""]
+  ]
+
+  const element = document.querySelector('table')
+    
+  if(!element.classList.contains('animate__animated','animate__fadeIn')) {
+    element.classList.add('animate__animated','animate__fadeIn')
+    element.style.animationDuration = "2s"
+    } else {
+    element.classList.remove('animate__animated','animate__fadeIn')
+    }
+    // Add animation classes back to our element after 1 milisecond;
+    setTimeout(function(){
+      element.classList.add('animate__animated','animate__fadeIn');
+    }, 100);
 }
