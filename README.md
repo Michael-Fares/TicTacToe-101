@@ -1,4 +1,5 @@
 # TicTacToe-101
+![Screenshot 2021-12-10 at 17-32-21 Tic Tac Toe](https://user-images.githubusercontent.com/75627846/145654037-ef28d058-18a4-488b-99f9-bb3a0abf8ef5.png)
 
 ## Instructions
 
